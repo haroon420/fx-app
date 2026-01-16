@@ -10,7 +10,10 @@ const fromSelect = document.getElementById("from-currency");
 const toSelect = document.getElementById("to-currency");
 const convertButton = document.getElementById("convert-button");
 const resultEl = document.getElementById("result");
+// Swap button element
 const swapButton = document.getElementById("swap-button");
+// History list element
+const historyList = document.getElementById("history-list");
 
 
 // Hardcoded example exchange rates used for the MVP.
@@ -76,4 +79,9 @@ convertButton.addEventListener("click", () => {
   const converted = convert(amount, rate);
 // Display the final converted amount to the user.  
   resultEl.textContent = `Result: ${formatMoney(converted)} (${from} to ${to})`;
+// Add the conversion to the history list.  
+  const historyItem = document.createElement("li");
+  historyItem.textContent = `${formatMoney(amount)} ${from} = ${formatMoney(converted)} ${to} (Rate: ${rate})`;
+  historyList.prepend(historyItem);
 });
+
