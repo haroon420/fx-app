@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FX Currency Converter</title>
+  <link rel="stylesheet" href="./src/css/styles.css" />
+</head>
+<body>
+
+  <h1>FX Currency Converter</h1>
+
+  <form id="converter-form">
+    <div>
+      <label for="amount">Amount</label><br />
+      <input
+        type="number"
+        id="amount"
+        name="amount"
+        placeholder="e.g. 100"
+      />
+    </div>
+
+    <br />
+
+    <div>
+      <label for="from-currency">From currency</label><br />
+      <select id="from-currency" name="from-currency">
+        <option value="USD">USD – United States Dollar</option>
+        <option value="EUR">EUR – Euro</option>
+        <option value="GBP">GBP – British Pound</option>
+      </select>
+    </div>
+
+    <br />
+
+    <div>
+      <label for="to-currency">To currency</label><br />
+      <select id="to-currency" name="to-currency">
+        <option value="EUR">EUR – Euro</option>
+        <option value="USD">USD – United States Dollar</option>
+        <option value="GBP">GBP – British Pound</option>
+      </select>
+    </div>
+
+    <br />
+
+    <button type="button" id="swap-button">Swap currencies</button>
+    <br /><br />
+    <button type="button" id="convert-button">Convert</button>
+  </form>
+
+  <hr />
+
+  <section>
+    <h2>Result</h2>
+    <p id="result">Converted amount will appear here.</p>
+  </section>
+
+  <script type="module" src="./src/js/app.js"></script>
+</body>
+</html>
