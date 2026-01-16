@@ -1,6 +1,6 @@
 // src/js/app.js
 
-// Import the conversion function from a separate file.
+// Main application logic for the currency converter web app.
 // This keeps the conversion logic separate from the UI logic.
 import { convert } from "./converter.js";
 
@@ -10,6 +10,8 @@ const fromSelect = document.getElementById("from-currency");
 const toSelect = document.getElementById("to-currency");
 const convertButton = document.getElementById("convert-button");
 const resultEl = document.getElementById("result");
+const swapButton = document.getElementById("swap-button");
+
 
 // Hardcoded example exchange rates used for the MVP.
 const rates = {
@@ -20,6 +22,14 @@ const rates = {
   "GBP->USD": 1.28,
   "GBP->EUR": 1.16,
 };
+
+// Event listener for the Swap button.
+swapButton.addEventListener("click", () => {
+  const currentFrom = fromSelect.value;
+  fromSelect.value = toSelect.value;
+  toSelect.value = currentFrom;
+});
+
 
 // Formats a numeric value to two decimal places. 
 // This is used to display currency values consistently in the UI.
