@@ -20,6 +20,7 @@ The application is intended as a lightweight, efficient utility. It is to do one
 
 ---
 Figma Prototype Link: https://www.figma.com/design/MxXzLLQUenyJLwfXAXWYIZ/FX-Converter-%E2%80%93-Prototype?t=BvJdJ2mh7Qn5JKh5-1
+
 Figma Brainstorming Link: https://www.figma.com/board/juXFun67iailrwz4HHo9Tp/UI_UX_Layout?t=BvJdJ2mh7Qn5JKh5-1
 
 ---
